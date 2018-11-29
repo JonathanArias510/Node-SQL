@@ -36,6 +36,6 @@ connection.connect(function (err) {
     }
 });
 //Querys
-var querys = new MetodosSql_1["default"](connection);
-querys.createDB('mydb');
-querys.deleteDB('mydb');
+// var querys = new MetodosSql_1["default"](connection);
+// querys.createDB('mydb');
+// querys.deleteDB('mydb');

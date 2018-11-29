@@ -7,7 +7,7 @@ var MetodosSql = /** @class */ (function () {
             delateDB: 'DROP DATABASE ',
             createTB: 'CREATE TABLE ',
             insertTB: 'INSERT INTO ',
-            selectTB: 'SELECT * FROM '
+            selectTB: 'SELECT * FROMd '
         };
         this.connection = connection;
     }
