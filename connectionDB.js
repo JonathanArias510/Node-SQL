@@ -6,20 +6,14 @@ var mysql = require("mysql");
 var MetodosSql_1 = require("./MetodosSql");
 //objeto temporal
 var signinDB = {
-    // database: "ingnovat_prueba",
-    // port: "3306"
+    host: "199.79.62.144",
+    user: "ingnovat_stiven",
+    password: "#Ing2017",
+    database: "ingnovat_prueba",
+    port: '3306'
 };
 // Conectando a la base de datos.
-var connection = mysql.createConnection({
-
-  host: "199.79.62.144",
-  user: "ingnovat_stiven",
-  password: "#Ing2017",
-  database: "ingnovat_prueba",
-  port: '3306'
-//
-// 199.79.62.144
-});
+var connection = mysql.createConnection(signinDB);
 // signinDB = {
 // 	host: '',
 // 	user: '',
@@ -36,6 +30,8 @@ connection.connect(function (err) {
     }
 });
 //Querys
-// var querys = new MetodosSql_1["default"](connection);
+var querys = new MetodosSql_1["default"](connection);
 // querys.createDB('mydb');
 // querys.deleteDB('mydb');
+querys.useDB('ingnovat_prueba');
+querys.selectDB('ingnovat_prueba', 'personas');

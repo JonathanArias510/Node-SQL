@@ -7,7 +7,7 @@ var MetodosSql = /** @class */ (function () {
             delateDB: 'DROP DATABASE ',
             createTB: 'CREATE TABLE ',
             insertTB: 'INSERT INTO ',
-            selectTB: 'SELECT * FROMd '
+            selectTB: 'SELECT * FROM '
         };
         this.connection = connection;
     }
@@ -32,6 +32,42 @@ var MetodosSql = /** @class */ (function () {
             else {
                 console.log(result);
                 console.log("\nDataBase \"" + nameDB + "\" is delate\n");
+            }
+        });
+    };
+    MetodosSql.prototype.selectDB = function (nameDB, nameTB) {
+        this.connection.query(("" + this.sqlCom.selectTB + nameTB), function (err, result) {
+            if (err) {
+                console.log('\nOcurrio un error\n');
+                throw err;
+            }
+            else {
+                console.log(result);
+                console.log("\nDataBase \"" + nameDB + "\" Selected Table " + nameTB + "\n");
+            }
+        });
+    };
+    MetodosSql.prototype.useDB = function (nameDB) {
+        this.connection.query(("USE " + nameDB), function (err, result) {
+            if (err) {
+                console.log('\nOcurrio un error\n');
+                throw err;
+            }
+            else {
+                console.log(result);
+                console.log("\nDataBase \"" + nameDB + "\" is delate\n");
+            }
+        });
+    };
+    MetodosSql.prototype.insertDB = function (nameDB, nameTB) {
+        this.connection.query(("INSERT INTO Personas (Codigo_Persona, Nombre_Persona) VALUES ('123456789123456789', 'PRUEVA MAL ESCRITA')"), function (err, result) {
+            if (err) {
+                console.log('\nOcurrio un error\n');
+                throw err;
+            }
+            else {
+                console.log(result);
+                console.log("\nDataBase \"" + nameDB + "\" Selected Table " + nameTB + "\n");
             }
         });
     };
