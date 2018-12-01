@@ -60,7 +60,7 @@ var MetodosSql = /** @class */ (function () {
         });
     };
     MetodosSql.prototype.insertDB = function (nameDB, nameTB) {
-        this.connection.query(("INSERT INTO Personas (Codigo_Persona, Nombre_Persona) VALUES ('123456789123456789', 'PRUEVA MAL ESCRITA')"), function (err, result) {
+        this.connection.query(("INSERT INTO Personas (Codigo_Persona, Nombre_Persona) VALUES ('89', ',gnkdjfsgsdfg')"), function (err, result) {
             if (err) {
                 console.log('\nOcurrio un error\n');
                 throw err;
