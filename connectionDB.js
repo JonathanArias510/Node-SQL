@@ -34,4 +34,4 @@ var querys = new MetodosSql_1["default"](connection);
 // querys.createDB('mydb');
 // querys.deleteDB('mydb');
 querys.useDB('ingnovat_prueba');
-querys.selectDB('ingnovat_prueba', 'personas');
+querys.selectDB('ingnovat_prueba', 'Personas');
